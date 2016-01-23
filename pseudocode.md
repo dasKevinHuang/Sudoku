@@ -1,4 +1,6 @@
 #### Methods
+
+```
 solve(string)
 	{
 	populate_board(string)
@@ -14,6 +16,7 @@ solve(string)
 	solved?(string)
 	pretty_board(string)
 	}
+```
 
 #### Data structure for board
 

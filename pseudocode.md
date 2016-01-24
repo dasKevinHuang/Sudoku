@@ -1,4 +1,4 @@
-#### Methods
+\#### Methods
 
 ```
 solve(string)

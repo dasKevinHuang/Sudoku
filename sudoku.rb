@@ -53,3 +53,51 @@ def populate_board(board_string)
 	# puts board[4]
 	board
 end
+
+def check_column?(board, col, num)
+	board.each do |cell|
+		if cell[:column] == col
+			if cell[:value] == num
+				return true
+			end
+		end
+	end
+	return false
+end
+
+def check_row?(board, row, num)
+	board.each do |cell|
+		if cell[:row] == row
+			if cell[:value] == num
+				return true
+			end
+		end
+	end
+	return false
+end
+
+def check_box?(board, box, num)
+	board.each do |cell|
+		if cell[:box] == box
+			if cell[:value] == num
+				return true
+			end
+		end
+	end
+	return false
+end
+
+def process_cell(board, id)
+	if board[id][:value].is_a? Array
+		board[id][:value].each do |number|
+			if (check_column?(board, board[id][:column], number) || check_row?(board, board[id][:row], number) || check_box?(board, board[id][:box], number))
+				board[id][:value].delete(number)
+			end
+		end
+		p board[id][:value]
+		if board[id][:value].size == 1
+			return board[id][:value][0]
+		end
+	end
+end
+

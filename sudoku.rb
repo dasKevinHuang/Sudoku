@@ -20,3 +20,36 @@ end
 # form `solve` returns.
 def pretty_board(board)
 end
+
+def populate_board(board_string)
+	board = []
+
+	board_string.chars.each_index do |index|
+		item_value = board_string[index]
+		item_row = (index / 9)
+		item_column = (index % 9)
+		item_box = ((item_row / 3) * 3) + (item_column / 3)
+
+		if item_value == '-'
+			item_value = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+		else
+			item_value = [item_value]
+		end
+
+		item_properties = {
+			id: index,
+			row: item_row, 
+			column: item_column, 
+			box: item_box,
+			value: item_value
+		}
+
+		board.push(item_properties)
+	end
+	# puts "Cell 2..."
+	# puts board[2]
+	# puts
+	# puts "Cell 4..."
+	# puts board[4]
+	board
+end

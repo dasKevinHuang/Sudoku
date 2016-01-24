@@ -41,7 +41,11 @@ describe 'check_methods' do
 		{id:16, row: 1, column: 7, box: 2, value: ['1','2','3','4','5','6','7','8','9']},
 		{id:17, row: 1, column: 8, box: 2, value: ['1','2','3','4','5','6','7','8','9']},
 		] }
+<<<<<<< HEAD
+		
+=======
 
+>>>>>>> 044d3600f46c818de2def90716d6a2ed581e59ed
 	context 'check column' do
 		it 'returns true if the number is in the column' do
 			expect(check_column?(board, 0, '5')).to eq true
@@ -70,6 +74,20 @@ describe 'check_methods' do
 	end
 end
 
+<<<<<<< HEAD
+describe 'Populate Board' do
+	board_string = '1-58-2----9--764-52--4--819-19--73-6762-83-9-----61-5---76---3-43--2-5-16--3-89--'
+	it 'returns an array when board has been populated' do
+		expect(populate_board('')).to be_a(Array)
+	end
+
+	it 'returns an 81 element array when populated' do
+		expect(populate_board(board_string).length).to eq 81
+	end
+
+	# it 'returns an array with '
+end
+=======
 describe 'process cell method' do
 	let(:board) { [
 		{id:0, row: 0, column: 0, box: 0, value: ['1','2','3','4','5','6','7','8','9']}, ## should be 1
@@ -93,3 +111,4 @@ describe 'process cell method' do
 		end
 	end
 end
+>>>>>>> 044d3600f46c818de2def90716d6a2ed581e59ed

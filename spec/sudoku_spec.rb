@@ -25,7 +25,7 @@ describe 'check_methods' do
 		{id:16, row: 1, column: 7, box: 2, value: ['1','2','3','4','5','6','7','8','9']},
 		{id:17, row: 1, column: 8, box: 2, value: ['1','2','3','4','5','6','7','8','9']},
 		] }
-		
+
 	context 'check column' do
 		it 'returns true if the number is in the column' do
 			expect(check_column?(board, 0, '5')).to eq true
@@ -50,6 +50,30 @@ describe 'check_methods' do
 		end
 		it 'returns false if the number is not in the box' do
 			expect(check_box?(board, 2, '5')).to eq false
+		end
+	end
+end
+
+describe 'process cell method' do
+	let(:board) { [
+		{id:0, row: 0, column: 0, box: 0, value: ['1','2','3','4','5','6','7','8','9']}, ## should be 1
+		{id:75, row: 8, column: 0, box: 6, value: '2'}, # not in box
+		{id:76, row: 8, column: 0, box: 6, value: '3'}, # not in box
+		{id:77, row: 8, column: 0, box: 6, value: '4'}, # not in box
+		{id:78, row: 8, column: 0, box: 6, value: '5'}, # not in box
+		{id:79, row: 8, column: 0, box: 6, value: '6'}, # not in box
+		{id:70, row: 8, column: 0, box: 6, value: '7'}, # not in box
+		{id:71, row: 0, column: 2, box: 6, value: '8'},
+		{id:72, row: 0, column: 2, box: 0, value: '9'}
+
+		] }
+
+	context 'blank cell' do
+			it 'does nothing when there is no clear solution' do
+				expect(process_cell(board, 45)).to eq nil
+		end
+			it 'fills the correct number to the cell' do
+				expect(process_cell(board, 0)).to eq '1'
 		end
 	end
 end

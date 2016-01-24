@@ -20,3 +20,36 @@ end
 # form `solve` returns.
 def pretty_board(board)
 end
+
+def check_column?(board, col, num)
+	board.each do |cell|
+		if cell[:column] == col
+			if cell[:value] == num
+				return true
+			end
+		end
+	end
+	return false
+end
+
+def check_row?(board, row, num)
+	board.each do |cell|
+		if cell[:row] == row
+			if cell[:value] == num
+				return true
+			end
+		end
+	end
+	return false
+end
+
+def check_box?(board, box, num)
+	board.each do |cell|
+		if cell[:box] == box
+			if cell[:value] == num
+				return true
+			end
+		end
+	end
+	return false
+end

@@ -48,7 +48,6 @@ describe "Sudoku" do
   end
 end
 
-<<<<<<< HEAD
 describe 'check_methods' do
   let(:board) { [
     {id:0, row: 0, column: 0, box: 0, value: '5'},
@@ -98,7 +97,7 @@ describe 'check_methods' do
     end
   end
 end
-=======
+
 board = [
     {id:0, row: 0, column: 0, box: 0, value: '5'},
     {id:1, row: 0, column: 1, box: 0, value: '25'},
@@ -137,11 +136,7 @@ describe 'check_methods' do
 		{id:16, row: 1, column: 7, box: 2, value: ['1','2','3','4','5','6','7','8','9']},
 		{id:17, row: 1, column: 8, box: 2, value: ['1','2','3','4','5','6','7','8','9']},
 		] }
-<<<<<<< HEAD
-		
-=======
 
->>>>>>> 044d3600f46c818de2def90716d6a2ed581e59ed
 	context 'check column' do
 		it 'returns true if the number is in the column' do
 			expect(check_column?(board, 0, '5')).to eq true
@@ -170,7 +165,6 @@ describe 'check_methods' do
 	end
 end
 
-<<<<<<< HEAD
 describe 'Populate Board' do
 	board_string = '1-58-2----9--764-52--4--819-19--73-6762-83-9-----61-5---76---3-43--2-5-16--3-89--'
 	it 'returns an array when board has been populated' do
@@ -183,7 +177,7 @@ describe 'Populate Board' do
 
 	# it 'returns an array with '
 end
-=======
+
 describe 'process cell method' do
 	let(:board) { [
 		{id:0, row: 0, column: 0, box: 0, value: ['1','2','3','4','5','6','7','8','9']}, ## should be 1
@@ -207,5 +201,4 @@ describe 'process cell method' do
 		end
 	end
 end
->>>>>>> 044d3600f46c818de2def90716d6a2ed581e59ed
->>>>>>> 856d33f2908f99e3d973ac488005ca5ecc2940f6
+

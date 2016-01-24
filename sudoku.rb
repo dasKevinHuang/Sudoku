@@ -52,6 +52,29 @@ def populate_board(board_string)
 	# puts "Cell 4..."
 	# puts board[4]
 	board
+
+# takes an array and id
+# iterate over the array
+# if the id in the array matches the argument id
+# return the value of the id as an array
+def get_value(array, id)
+  array.each  do|x|
+    if x[:id] == id
+      return x[:value] = [x[:value]]
+    end
+  end
+end
+
+# takes an array, id, and value
+# iterate over the array
+# if the id in the array matches the argument id
+# replace the current value with the argument value as an array
+def set_value(array, id, val)
+  array.each  do|x|
+    if x[:id] == id
+      return x[:value] = [val]
+    end
+  end
 end
 
 def check_column?(board, col, num)

@@ -1,17 +1,17 @@
 #### Methods
 
 ```
-solve(string)
+solve(string) - *Todd*
 	{
-	populate_board(string)
-	get_value(array, id)
-	process_cell(array, id)
+	populate_board(string) - *Lindsey*
+	get_value(array, id) - *Khamla*/ Done
+			process_cell(array, id) - *Kevin*/ Almost Done!
 		{
-		check_column?(column, num)
-		check_row?(row, num)
-		check_box?(box, num)
+			check_column?(column, num) - *Kevin*/Done
+			check_row?(row, num) - *Kevin*/Done
+			check_box?(box, num) - *Kevin*/Done
 		}
-	set_value(array, id, newvalue)
+	set_value(array, id, newvalue) - *Khamla*/Done
 	completed?(string)
 	solved?(string)
 	pretty_board(string)

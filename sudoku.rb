@@ -74,14 +74,6 @@ def get_value(array, id)
   end
 end
 
-def get_value(array, id)
-  array.each  do|x|
-    if x[:id] == id
-      return x[:value] = [x[:value]]
-    end
-  end
-end
-
 # takes an array, id, and value
 # iterate over the array
 # if the id in the array matches the argument id

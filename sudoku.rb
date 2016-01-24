@@ -4,6 +4,15 @@
 # your solver has tried to solve it.
 # How you represent your board is up to you!
 def solve(board_string)
+  return board if solved?
+
+  board = populate_board(board_string)
+  board.each do |id|
+
+   p board[3]
+  end
+
+  return board
 end
 
 # Returns a boolean indicating whether
@@ -123,4 +132,3 @@ def process_cell(board, id)
 		end
 	end
 end
-

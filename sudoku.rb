@@ -50,8 +50,8 @@ def populate_board(board_string)
 
 		item_properties = {
 			id: index,
-			row: item_row, 
-			column: item_column, 
+			row: item_row,
+			column: item_column,
 			box: item_box,
 			value: item_value
 		}
@@ -134,4 +134,11 @@ def process_cell(board, id)
 			return board[id][:value][0]
 		end
 	end
+end
+
+def completed?(array)
+  array.each do |x|
+    return false if x[:value].length != 1
+  end
+  true
 end

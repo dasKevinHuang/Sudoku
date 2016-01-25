@@ -6,12 +6,13 @@
 def solve(board_string)
   # return board if solved?
 
-  board = populate_board(board_string
-    i = 0
-  while !completed?(board) && i != 20
+  board = populate_board(board_string)
+  i = 1
+  while !completed?(board)
+    i += 1
+    break if i == 10
     board.each do |cell|
       process_cell(board, cell[:id])
-      i += 0
     end
   end
   board

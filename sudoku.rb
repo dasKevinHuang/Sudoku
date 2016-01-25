@@ -19,6 +19,9 @@ end
 # The input board will be in whatever
 # form `solve` returns.
 def pretty_board(board)
+  broken = board.scan(/.{1,9}/).join("\n")
+  spaced = broken.gsub(/(.{1})(?=.)/, '\1 \2')
+  return spaced
 end
 
 # takes an array and id

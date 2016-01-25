@@ -69,7 +69,7 @@ describe 'check_methods' do
     {id:16, row: 1, column: 7, box: 2, value: ['1','2','3','4','5','6','7','8','9']},
     {id:17, row: 1, column: 8, box: 2, value: ['1','2','3','4','5','6','7','8','9']},
     ] }
-    
+
   context 'check column' do
     it 'returns true if the number is in the column' do
       expect(check_column?(board, 0, '5')).to eq true
@@ -200,5 +200,30 @@ describe 'process cell method' do
 				expect(process_cell(board, 0)).to eq '1'
 		end
 	end
+end
+
+board1 = [
+    {id:0, row: 0, column: 0, box: 0, value: [1,2,3,4,5]},
+    {id:1, row: 0, column: 1, box: 0, value: [2]},
+    {id:2, row: 0, column: 2, box: 0, value: [3]},
+    ]
+
+board2 = [
+    {id:0, row: 0, column: 0, box: 0, value: [1]},
+    {id:1, row: 0, column: 1, box: 0, value: [2]},
+    {id:2, row: 0, column: 2, box: 0, value: [3]},
+    ]
+
+describe 'completed?' do
+  context 'more than one, false' do
+    it 'returns false if any values in the array have more than one element' do
+    expect(completed?(board1)).to eq false
+    end
+  end
+  context 'completed, true' do
+    it 'returns true if all values in the array have one element' do
+      expect(completed?(board2)).to eq true
+    end
+  end
 end
 

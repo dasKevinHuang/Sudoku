@@ -1,5 +1,7 @@
 require_relative '../sudoku'
 
+<<<<<<< HEAD
+=======
 describe "Sudoku" do
   let(:board) { [
     {id:0, row: 0, column: 0, box: 0, value: '5'},
@@ -98,6 +100,7 @@ describe 'check_methods' do
   end
 end
 
+>>>>>>> 9375ebcf9807cf8cafa56b9ddefb43b9f515899c
 board = [
     {id:0, row: 0, column: 0, box: 0, value: '5'},
     {id:1, row: 0, column: 1, box: 0, value: '25'},
@@ -153,6 +156,7 @@ describe 'check_methods' do
 		it 'returns false if the number is not in the row' do
 			expect(check_row?(board, 1, '5')).to eq false
 		end
+
 	end
 
 	context 'check boxes' do
@@ -201,6 +205,8 @@ describe 'process cell method' do
 		end
 	end
 end
+<<<<<<< HEAD
+=======
 
 board1 = [
     {id:0, row: 0, column: 0, box: 0, value: [1,2,3,4,5]},
@@ -227,3 +233,4 @@ describe 'completed?' do
   end
 end
 
+>>>>>>> 9375ebcf9807cf8cafa56b9ddefb43b9f515899c
